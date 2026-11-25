@@ -1,0 +1,31 @@
+[target]
+name = "digits-64-20-20-10-s9"
+dataset = "digits"
+architecture = [64, 20, 20, 10]
+precision = 9
+model_seeds = [0, 100, 200, 300, 400]
+training_profile = "original-digits"
+checkpoint_pattern = "(64, 20, 20, 10)-{model_index:02d}.npz"
+checkpoint_group = "digits"
+evaluation_split = "digits-holdout"
+
+[extraction]
+extractor = "original-digits"
+oracle_backend = "int64"
+track_bitwidth = true
+trial_seeds = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+w1_anchors = 1000
+w1_steps_per_anchor = 10
+w1_queries = 1
+b1_anchors = 10
+b1_queries = 500
+w2_max_anchors = 1000
+w2_steps_per_anchor = 10
+w2_p1_queries = 1
+w2_p2_queries = 10
+w2_p3_queries = 1
+b2_num_bases = 10
+b2_test_queries = 500
+last_layer_solver = "lll"
+last_layer_repetitions = 1
+bias_tolerances = [1, 1, 1]

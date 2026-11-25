@@ -1,0 +1,6 @@
+{
+  "dataset": "carlini",
+  "model": "models/carlini_784_256x8_1",
+  "device": "cpu",
+  "load_json": ""
+}

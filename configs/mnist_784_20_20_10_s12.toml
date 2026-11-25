@@ -1,0 +1,35 @@
+[target]
+name = "mnist-784-20-20-10-s12"
+dataset = "mnist"
+architecture = [784, 20, 20, 10]
+precision = 12
+model_seeds = [0, 100, 200]
+training_profile = "rebuttal-narrow"
+checkpoint_pattern = "mnist_bench_S12_M{model_index}.npz"
+checkpoint_group = "mnist-narrow"
+evaluation_split = "official-test"
+
+[extraction]
+extractor = "mnist"
+oracle_backend = "float64"
+track_bitwidth = false
+trial_seeds = [1, 2, 3, 4, 5]
+w1_anchors = 300
+w1_steps_per_anchor = 10
+w1_queries = 32
+b1_anchors = 10
+b1_queries = 500
+rank1_consensus = false
+b1_high_snr_filter = false
+w2_walk_mode = "dense"
+w2_inv_backend = "sympy"
+w2_max_anchors = 800
+w2_steps_per_anchor = 15
+w2_p1_queries = 32
+w2_p2_queries = 32
+w2_p3_queries = 5
+b2_num_bases = 15
+b2_test_queries = 2000
+last_layer_solver = "flooded_pinv"
+last_layer_repetitions = 64
+bias_tolerances = [1, 1, 2]

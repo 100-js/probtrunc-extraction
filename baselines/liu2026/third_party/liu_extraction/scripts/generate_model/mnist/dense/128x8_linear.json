@@ -1,0 +1,12 @@
+{
+  "dataset": "mnist",
+  "layer_type": "dense",
+  "hidden_size": 128,
+  "layer_number": 8,
+  "lastactivation": "linear",
+  "epochs": 100,
+  "bs": 64,
+  "seed": 42,
+  "device": "cpu",
+  "load_json": ""
+}

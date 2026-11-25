@@ -1,0 +1,34 @@
+[target]
+name = "mnist-784-128-64-10-s6"
+dataset = "mnist"
+architecture = [784, 128, 64, 10]
+precision = 6
+model_seeds = [0, 100, 200]
+training_profile = "rebuttal-wide"
+checkpoint_pattern = "mnist_784_128_64_10_S6_M{model_index}.npz"
+checkpoint_group = "mnist-wide"
+evaluation_split = "official-test"
+
+[extraction]
+extractor = "mnist"
+oracle_backend = "float64"
+track_bitwidth = false
+trial_seeds = [1, 2, 3, 4, 5]
+w1_anchors = 1500
+w1_steps_per_anchor = 10
+w1_queries = 1
+b1_anchors = 15
+b1_queries = 250
+rank1_consensus = true
+b1_high_snr_filter = true
+w2_walk_mode = "sparsity_masked"
+w2_inv_backend = "float64"
+w2_max_anchors = 1200
+w2_steps_per_anchor = 15
+w2_p1_queries = 1
+w2_p2_queries = 0
+w2_p3_queries = 1
+b2_num_bases = 15
+b2_test_queries = 1000
+last_layer_solver = "flooded_pinv"
+last_layer_repetitions = 64

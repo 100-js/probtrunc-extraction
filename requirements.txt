@@ -1,9 +1,0 @@
-# Colab-tested versions for reproducibility
-numpy==2.0.2
-scikit-learn==1.6.1
-scipy==1.16.3
-sympy==1.14.0
-fpylll==0.6.4
-cysignals==1.12.6
-matplotlib==3.10.0
-torch==2.11.0

@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.venv/
+build/
+dist/
+runs/
+data/
+*.egg-info/
+.pytest_cache/
+baselines/liu2026/.venv/
+baselines/liu2026/runs*/

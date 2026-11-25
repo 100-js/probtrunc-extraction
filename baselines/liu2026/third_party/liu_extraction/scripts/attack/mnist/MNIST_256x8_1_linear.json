@@ -1,0 +1,6 @@
+{
+  "dataset": "mnist",
+  "model": "models/mnist_784_256x8_1",
+  "device": "cpu",
+  "load_json": ""
+}
